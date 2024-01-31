@@ -1,6 +1,6 @@
 package ru.netology.domain;
+
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class Game {
@@ -17,7 +17,8 @@ public class Game {
         for (Player player : players) {
             if (player.getName().equals(playerName1)) {
                 player1 = player;
-            } else if (player.getName().equals(playerName2)) {
+            }
+            if (player.getName().equals(playerName2)) {
                 player2 = player;
             }
         }
