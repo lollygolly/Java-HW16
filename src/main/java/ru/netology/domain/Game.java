@@ -15,16 +15,17 @@ public class Game {
     public int round(String playerName1, String playerName2) {
         Player player1 = null;
         Player player2 = null;
-        for (Integer id : players.keySet()) {
+
+    for (Integer id : players.keySet()) {
             String name = players.get(player1.getId());
             if (name.equals(playerName1)) {
-                player1.getName().equals(name);
+                player1 =;
             }
         }
         for (Integer id : players.keySet()) {
             String name = players.get(player2.getId());
             if (name.equals(playerName2)) {
-                player2.getName().equals(name);
+                name = player2.getName();
             }
         }
 
