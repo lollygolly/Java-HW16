@@ -6,28 +6,15 @@ import java.util.List;
 
 public class Game {
 
-    HashMap<Integer, Player> players = new HashMap<>(); // key - getID, value - player
+    HashMap<String, Player> players = new HashMap<>(); // key - getName, value - player
 
     public void register(Player player) {
-        players.put(player.getId(), player);
+        players.put(player.getName(), player);
     }
 
     public int round(String playerName1, String playerName2) {
-        Player player1 = null;
-        Player player2 = null;
-
-        for (Integer id : players.keySet()) {
-            Player name = players.get(id);
-            if (name.getName().equals(playerName1)) {
-                player1 = name;
-            }
-        }
-        for (Integer id : players.keySet()) {
-            Player name = players.get(id);
-            if (name.getName().equals(playerName2)) {
-                player2 = name;
-            }
-        }
+        Player player1 = players.get(playerName1);
+        Player player2 = players.get(playerName2);
 
         if (player1 == null) {
             throw new NotRegisteredException(
